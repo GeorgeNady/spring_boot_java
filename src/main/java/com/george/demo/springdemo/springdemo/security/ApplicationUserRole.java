@@ -8,7 +8,8 @@ import static com.george.demo.springdemo.springdemo.security.ApplicationUserPerm
 
 public enum ApplicationUserRole {
     STUDENT(Sets.newHashSet()),
-    ADMIN(Sets.newHashSet(USER_READ, USER_WRITE, COURSE_READ, COURSE_WRITE));
+    ADMIN(Sets.newHashSet(USER_READ, USER_WRITE, COURSE_READ, COURSE_WRITE)),
+    TEACHER(Sets.newHashSet(STUDENT_READ, STUDENT_READ));
 
     private final Set<ApplicationUserPermission> permissions;
 
